@@ -1,8 +1,10 @@
+//https://www.youtube.com/watch?v=CWpTAzOz6mE
+//https://www.youtube.com/watch?v=SXJ377G5bOg
 import Box from '@mui/material/Box'
 import React from 'react'
 import { images } from '../assets'
 import { Colors } from 'chart.js';
-import { colors } from '@mui/material';
+import { Stack, TextField, colors } from '@mui/material';
 
 const LoginPage = () => {
     const [onRequest,setOnRequest]=React.useState(false);
@@ -56,8 +58,17 @@ const LoginPage = () => {
             <img src={images.logo} alt="logo" width="100px" height={60}/>
             </Box>
             {/* Login Form */}
-            <Box sx={{position:"absolute", top:0,left:0,width:"100%",height:"100%", display:"flex", alignItems:"center", justifyContent:"center"}}>
+            <Box sx={{position:"absolute", top:0,left:0,width:"100%",height:"100%", display:"flex", alignItems:"center", justifyContent:"center" , "::-webkit-scrollbar":{display:"none"}}}>
+                
+            <Box component="form" maxWidth={400} width="100%">
+                <Stack spacing={3} sx={{p:5}}>
+                    <TextField label ="username" fullWidth>
 
+                    </TextField>
+                    <TextField label ="password" type='password' fullWidth></TextField>
+               </Stack>
+
+            </Box>
             </Box>
         </Box>       
 
