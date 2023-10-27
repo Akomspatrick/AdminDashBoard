@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import { Css } from '@mui/icons-material';
+import CssBaseline from '@mui/material/CssBaseline';
+import GlobalStyles from '@mui/material/GlobalStyles';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes/route';
+
+const globalStyles={
+  a:{
+    color:"unset",
+    textdiacoration:"none"
+  }
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <CssBaseline/>
+   <GlobalStyles styles={globalStyles}/>
+   <RouterProvider router={router}/>
+   </>
   );
 }
 
